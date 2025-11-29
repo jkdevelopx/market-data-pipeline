@@ -37,14 +37,17 @@ AAPL · MSFT · NVDA · TSLA · GOOGL · BTC-USD · ETH-USD · SOL-USD · ADA-US
 ```bash
 pip install -r requirements.txt
 streamlit run streamlit_app.py
-Project structure
+```
+
+## Project structure
 textmarket-data-pipeline/
 ├── scripts/etl.py              # daily data update
 ├── streamlit_app.py            # dashboard
 ├── .github/workflows/          # GitHub Actions (runs every day)
 ├── requirements.txt
 └── .streamlit/secrets.toml     # credentials (not in repo)
-Automation
+
+## Automation
 GitHub Actions pulls fresh data and updates the database every morning.
 The dashboard always shows the latest prices even if my laptop is off.
 
