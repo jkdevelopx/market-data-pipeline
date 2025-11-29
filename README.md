@@ -40,16 +40,19 @@ streamlit run streamlit_app.py
 ```
 
 ## Project structure
+```bash
 textmarket-data-pipeline/
 ├── scripts/etl.py              # daily data update
 ├── streamlit_app.py            # dashboard
 ├── .github/workflows/          # GitHub Actions (runs every day)
 ├── requirements.txt
 └── .streamlit/secrets.toml     # credentials (not in repo)
+```
 
 ## Automation
 GitHub Actions pulls fresh data and updates the database every morning.
 The dashboard always shows the latest prices even if my laptop is off.
 
-  Built by jkdevelopx — November 2025
+
+Built by jkdevelopx — November 2025
 
