@@ -1,10 +1,15 @@
 import yfinance as yf
 import pandas as pd
 from supabase import create_client
-import streamlit as st
+import os
 from datetime import datetime
 
-supabase = create_client(st.secrets["SUPABASE_URL"], st.secrets["SUPABASE_KEY"])
+# ใช้ environment variables แทน st.secrets → ทำงานได้ทั้ง local และ GitHub Actions
+supabase = create_client(
+    url=os.getenv("SUPABASE_URL"),
+    key=os.getenv("SUPABASE_KEY")
+)
+
 SYMBOLS = ["AAPL","MSFT","NVDA","TSLA","GOOGL","BTC-USD","ETH-USD","SOL-USD","ADA-USD","DOGE-USD"]
 
 def run_etl():
