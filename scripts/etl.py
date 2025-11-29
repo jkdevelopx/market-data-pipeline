@@ -4,10 +4,10 @@ from supabase import create_client
 import os
 from datetime import datetime
 
-# วิธีที่ถูกต้อง 100% กับ supabase-py 2025
+# ส่ง env vars ไป supabase ถูกต้อง 100%
 supabase = create_client(
     supabase_url = os.getenv("SUPABASE_URL"),
-    supabase_key  = os.getenv("SUPABASE_KEY")
+    supabase_key = os.getenv("SUPABASE_KEY")
 )
 
 SYMBOLS = ["AAPL","MSFT","NVDA","TSLA","GOOGL","BTC-USD","ETH-USD","SOL-USD","ADA-USD","DOGE-USD"]
